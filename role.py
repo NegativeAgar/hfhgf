@@ -1,22 +1,8 @@
 import discord
 from discord import utils
 import os
+import config
 
-POST_ID = 672158267803303947
-
-ROLES = {
-    '🍏':670273756383412234,
-    '🍎':670273982435426304,
-    '🍐':670274093005930526,
-    '🍊':670274356647165973,
-    '🍑':670274468656185344,
-    '🥝':670271810079555584
-}
-
-EXCROLES = ()
-
-MAX_ROLES_PER_USER = 2
- 
 class MyClient(discord.Client):
     async def on_ready(self):
         print('Logged on as {0}!'.format(self.user))
@@ -28,9 +14,9 @@ class MyClient(discord.Client):
  
         try:
             emoji = str(payload.emoji) # эмоджик который выбрал юзер
-            role = utils.get(message.guild.roles, id=ROLES[emoji]) # объект выбранной роли (если есть)
+            role = utils.get(message.guild.roles, id=config.ROLES[emoji]) # объект выбранной роли (если есть)
        
-            if(len([i for i in member.roles if i.id not in EXCROLES]) <= MAX_ROLES_PER_USER):
+            if(len([i for i in member.roles if i.id not in config.EXCROLES]) <= config.MAX_ROLES_PER_USER):
                 await member.add_roles(role)
                 print('[SUCCESS] User {0.display_name} has been granted with role {1.name}'.format(member, role))
             else:
@@ -49,7 +35,7 @@ class MyClient(discord.Client):
  
         try:
             emoji = str(payload.emoji) # эмоджик который выбрал юзер
-            role = utils.get(message.guild.roles, id=ROLES[emoji]) # объект выбранной роли (если есть)
+            role = utils.get(message.guild.roles, id=config.ROLES[emoji]) # объект выбранной роли (если есть)
  
             await member.remove_roles(role)
             print('[SUCCESS] Role {1.name} has been remove for user {0.display_name}'.format(member, role))
