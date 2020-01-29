@@ -10,6 +10,6 @@ ROLES = {
     '🥝':670271810079555584
 }
 
-EXCROLES = ()
+EXCROLES = ('Глава')
 
 MAX_ROLES_PER_USER = 2
