@@ -2,7 +2,7 @@ import discord
 from discord import utils
 import os
 
-POST_ID = 670301103132246026
+POST_ID = 672158267803303947
 
 ROLES = {
     '🍏':670273756383412234,
