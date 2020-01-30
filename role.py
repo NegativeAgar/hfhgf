@@ -15,7 +15,7 @@ ROLES = {
 
 EXCROLES = ("test")
 
-MAX_ROLES_PER_USER = 2
+MAX_ROLES_PER_USER = 5
 
 class MyClient(discord.Client):
     async def on_ready(self):
