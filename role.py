@@ -13,7 +13,7 @@ ROLES = {
     '🥝':670271810079555584
 }
 
-EXCROLES = ("test")
+EXCROLES = ()
 
 MAX_ROLES_PER_USER = 5
 
