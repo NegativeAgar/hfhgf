@@ -5,7 +5,7 @@ import os
 POST_ID = 672160421368561667
 
 ROLES = {
-    '❤': 711203435915116607,
+    '💛': 711203435915116607,
     '💙': 711203740752805968,
     '🧡': 711203932822700082,
     '💚': 711204030503845898,
@@ -15,7 +15,7 @@ ROLES = {
 
 EXCROLES = ()
 
-MAX_ROLES_PER_USER = 5
+MAX_ROLES_PER_USER = 15
 
 
 class MyClient(discord.Client):
