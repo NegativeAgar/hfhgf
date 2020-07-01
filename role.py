@@ -3,7 +3,7 @@ from discord import utils
 import os
 
 prefix = "."
-bot = commands.Bot(command_prefix=prefix)
+client = commands.Bot(command_prefix=prefix)
 
 POST_ID = 672160421368561667
 
