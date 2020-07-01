@@ -2,6 +2,9 @@ import discord
 from discord import utils
 import os
 
+prefix = "."
+bot = commands.Bot(command_prefix=prefix)
+
 POST_ID = 672160421368561667
 
 ROLES = {
@@ -64,7 +67,6 @@ class MyClient(discord.Client):
 
 
 # RUN
-client = MyClient()
+
 token = os.environ.get('TOKEN')
 client.run(str(token))
-
